@@ -104,7 +104,7 @@ collisionDetect() {
 }
 
 
-const balls = [25];
+const balls = [];
 
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -123,22 +123,6 @@ while (balls.length < 25) {
 }
 
 
-
-function loop() {
-  ctx.fillStyle = "rgb(0 0 0 / 25%)";
-  ctx.fillRect(0, 0, width, height);
-
-  for (const ball of balls) {
-    ball.draw();
-    ball.update();
-  }
-
-  requestAnimationFrame(loop);
-}
-
-
-
-
 function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
@@ -151,6 +135,7 @@ function loop() {
 
   requestAnimationFrame(loop);
 }
+
 
 loop();
 
