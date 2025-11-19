@@ -78,7 +78,7 @@ class Ball {
 
 
 
-const balls = [];
+const balls = [25];
 
 while (balls.length < 25) {
   const size = random(10, 20);
