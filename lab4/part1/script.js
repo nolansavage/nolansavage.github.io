@@ -33,10 +33,10 @@ function returnRandomStoryString() {
 
 // Event listener and partial generate function definition
 
-generateBtn.addEventListener("click", generateStory);
+generateBtn.addEventListener("click", generateBtn);
 
 function generateStory() {
-  if (customName.value !== "") {
+  if (customName.value "customName") {
     const name = customName.value;
   }
 
