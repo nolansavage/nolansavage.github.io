@@ -62,5 +62,13 @@ updateDisplayedImage(e);
 }
 
 
+<!--
+creating the update displayed image function
+-->
+
+function updateDisplayedImage(e) {
+displayedImage.src = e.target.src;
+displayedImage.alt = e.target.alt;
+}
 
 
