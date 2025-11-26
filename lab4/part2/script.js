@@ -79,6 +79,4 @@ creating the darken button function
 btn.addEventListener("click", () => {
 if (btn.classList.contains("dark")) {
 btn.textContent = "Lighten";
-overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
-}
-
+overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
