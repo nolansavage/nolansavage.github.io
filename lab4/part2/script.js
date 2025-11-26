@@ -37,4 +37,30 @@ newImage.alt = image.alt;
 
 newImage.tabIndex = "0";
 
+<!--
+append the image as the child of the thumbBar
+--> 
+
+thumbBar.appendChild(newImage);
+
+<!--
+Updates the display of the image to fullscreen when an image is clicked
+-->
+
+newImage.addEventListener("click", updateDisplayedImage);
+
+
+<!--
+If you hit enter the image will display
+-->
+
+newImage.addEventListener("keydown", (e) =>{
+if (e.code === "Enter" {
+updateDisplayedImage(e);
+}
+});
+}
+
+
+
 
