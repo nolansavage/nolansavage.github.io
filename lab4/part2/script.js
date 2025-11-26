@@ -25,6 +25,16 @@ const baseURL =
 "https://mdn.github.io/shared-assets/images/examples/image/examples/learn/gallery/";
 
 
+<!--
+For Of loop
+--> 
 
+for (const image of images) {
+
+const newImage = document.createElement("img");
+newImage.src = `${baseURL}${image.filename}`;
+newImage.alt = image.alt;
+
+newImage.tabIndex = "0";
 
 
