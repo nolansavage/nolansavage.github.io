@@ -32,9 +32,12 @@ function returnRandomStoryString() {
 
 // Event listener and partial generate function definition
 
-generateBtn.addEventListener("click", generateBtn);
+generateBtn.addEventListener("click", generateStory);
 
 function generateStory() {
+  let newStory = returnRandomStoryString();
+
+
   if (customName.value "customName") {
     const name = customName.value;
   }
