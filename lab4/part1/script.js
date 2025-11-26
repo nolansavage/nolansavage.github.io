@@ -9,11 +9,10 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-// Raw text strings
+// Text strings
 
-// Willy the Goblin
-// Big Daddy
-// Father Christmas
+const characters = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
+
 
 // the soup kitchen
 // Disneyland
