@@ -153,15 +153,27 @@ document.body.appendChild(counter);
 function updateCounter {
  counter.text.Content = `Ball count' ${ballCount}`;
 
+//Evil circle size
+const evil = new EvilCircle(100, 100);
+evil.setControls();
+
+
 // Animation loop
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
-  for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
-  }
+
+//balls existing
+for (const ball of balls) {
+ if (ball.exists) {
+  ball.draw();
+  ball.update();
+  ball.collisionDetect();
+ }
+}
+
+//update ball counter
+updateCounter();
 
   requestAnimationFrame(loop);
 }
