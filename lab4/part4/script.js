@@ -90,6 +90,43 @@ if (this.y + this.size >= height) this.y = height - this.size;
 if (this.y - this.size <= 0) this.y = this.size;
 }
 
+//controls for evil circle
+setControls() {
+window.addEventListener('keydown', (e) => {
+switch(e.key) {
+case 'a': //move left
+this.x -= this.velX;
+break;
+case 'd': //move right
+this.x += this.velX;
+break;
+case 'w': //move up
+this.y -= this.velY;
+break;
+case 's': //move down
+this.y += this.velY
+break;
+}
+}};
+}
+
+//eating the balls function
+collisionDetect() {
+ for (const ball of balls) {
+  if (ball.exists) {
+   const dx = this.x - ball.x;
+   const dy = this.y - ball.y;
+   const distance = Math.sqrt(dx * dx + dy * dy);
+
+    if(distance < this.size +ball.size) {
+     ball.exists = false; //gets rid of the ball
+     ballCount--;
+    }
+   }
+  }
+ }
+}
+
 // Create an array of balls
 const balls = [];
 
