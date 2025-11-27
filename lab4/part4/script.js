@@ -14,6 +14,17 @@ function randomRGB() {
   return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
 }
 
+// Evil circle
+class Shape {
+constructor(x, y, velX, exists = true) {
+this.x = x;
+this.y = y;
+this.velX = velX
+this.velY;
+this.exists = exists;
+}
+}
+
 // Ball class
 class Ball {
   constructor(x, y, velX, velY, color, size) {
@@ -61,8 +72,8 @@ class Ball {
 // Create an array of balls
 const balls = [];
 
-while (balls.length < 25) {
-  const size = random(10, 20);
+while (balls.length < 30) {
+  const size = random(10, 30);
   const ball = new Ball(
     random(size, width - size),
     random(size, height - size),
@@ -78,7 +89,6 @@ while (balls.length < 25) {
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
-
   for (const ball of balls) {
     ball.draw();
     ball.update();
