@@ -143,6 +143,16 @@ while (balls.length < 30) {
   balls.push(ball);
 }
 
+//ball counter
+let ballCount = balls.length;
+const counter = document.createElement('p');
+counter.style.color = 'white';
+counter.style.fontSize = '20px';
+document.body.appendChild(counter);
+
+function updateCounter {
+ counter.text.Content = `Ball count' ${ballCount}`;
+
 // Animation loop
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
