@@ -155,7 +155,7 @@ const evil = new EvilCircle(100, 100);
 evil.setControls();
 
 function updateCounter() {
- counter.textContent = `Ball count ${ballCount}`;
+ counter.textContent = `Ball count: ${ballCount}`;
 }
 
 // Animation loop
@@ -171,6 +171,12 @@ for (const ball of balls) {
   ball.collisionDetect();
  }
 }
+
+// Draw and update the EvilCircle
+evil.draw();
+evil.checkBounds();
+evil.collisionDetect();
+
 
 //update ball counter
 updateCounter();
