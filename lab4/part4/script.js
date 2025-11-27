@@ -16,11 +16,11 @@ function randomRGB() {
 
 // Evil circle
 class Shape {
-constructor(x, y, velX, exists = true) {
+constructor(x, y, velX, velY, exists = true) {
 this.x = x;
 this.y = y;
-this.velX = velX
-this.velY;
+this.velX = velX;
+this.velY = velY;
 this.exists = exists;
 }
 }
@@ -150,13 +150,13 @@ counter.style.color = 'white';
 counter.style.fontSize = '20px';
 document.body.appendChild(counter);
 
-function updateCounter {
- counter.text.Content = `Ball count' ${ballCount}`;
-
 //Evil circle size
 const evil = new EvilCircle(100, 100);
 evil.setControls();
 
+function updateCounter() {
+ counter.textContent = `Ball count ${ballCount}`;
+}
 
 // Animation loop
 function loop() {
