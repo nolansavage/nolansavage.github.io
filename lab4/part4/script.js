@@ -82,6 +82,14 @@ ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
 ctx.stroke();
 }
 
+//keeping the evil circle inside the screen
+checkBounds() {
+if (this.x + this.size >= width) this.x = width - this.size;
+if (this.x + this.size <= 0) this.x = this.size;
+if (this.y + this.size >= height) this.y = height - this.size;
+if (this.y - this.size <= 0) this.y = this.size;
+}
+
 // Create an array of balls
 const balls = [];
 
