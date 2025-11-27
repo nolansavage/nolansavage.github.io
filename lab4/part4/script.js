@@ -74,6 +74,14 @@ this.color = "white";
 this.size = 20;
 }
 
+draw() {
+ctx.beginPath();
+ctx.strokeStyle = this.color;
+ctx.lineWidth = 3;
+ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+ctx.stroke();
+}
+
 // Create an array of balls
 const balls = [];
 
