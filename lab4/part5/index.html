@@ -58,7 +58,7 @@ value="right" /><label for="porridge-3">Just right?</label>
 <input
 type="radio"
 id="beds-1"
-name="beds
+name="beds"
 value="hard"
 checked /><label for="beds-1">Too hard?</label>
 <input
@@ -84,7 +84,7 @@ for="beds-3"
 <input
 type="checkbox"
 id="comfy"
-name="comfy" /><label for="comfy
+name="comfy" /><label for="comfy"
 >Comfy</label
 >
 <input type="checkbox"
@@ -92,7 +92,7 @@ id="luxurious"
 name="luxurious" /><label for="luxurious"
 >Luxurious</label>
 >
-<input typye"checkbox"
+<input type"checkbox"
 id="hi-tech"
 name="hi-tech" /><label for="hi-tech"
 >Hi-tech</label
@@ -132,24 +132,36 @@ for="majestic"
 </div>
 </div>
 
-    --
+ <div class="form-section">
+ <h2>Any other feedback?</h2>
 
-    Any other feedback?
+ <label for="comments">Give us your comments</label>
+ <br />
+ <textarea id="comments" name="comments"></textarea>
+ </div>
 
-    Give us your comments
+ <div class="form-section">
+ <h2>Your details</h2>
 
-    --
+ <div class="separator">
+ <label for="name">Name</label>
+ <input type="text" id="name" name="name" />
+ </div>
 
-    Your details
+ <div class="separator">
+ <label for="email">Email</label>
+ <input type="email" id="email" name="email" />
+ </div>
 
-    Name
-    Email
-    Phone
+ <div class="separator">
+ <label for="phone">Phone</label>
+ <input type="tel" id="phone" name="phone" />
+ </div>
+ </div>
 
-    --
-
-    Submit
-
-    --
-  </body>
+ <div class="form-section">
+ <button>Submit</button>
+ </div>
+ </form>
+ </body>
 </html>
