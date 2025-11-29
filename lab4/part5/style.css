@@ -106,3 +106,10 @@ button:focus {
   background-color: #eeeeee;
   cursor: pointer;
 }
+
+form {
+  background: url("https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg")
+    no-repeat;
+  margin-top: 20px;
+  padding-top: 50px;
+}
