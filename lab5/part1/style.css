@@ -5,7 +5,7 @@ html, body {
 }
 
 html {
-  font-size: 10px;
+  font-size: 12px;
   background-color: #dde;
 }
 
@@ -28,7 +28,7 @@ h1 {
   font-family: 'Sonsie One', cursive;
   font-size: 4rem;
   text-align: center;
-  color: white;
+  color: black;
   text-shadow: 2px 2px 10px black;
 }
 
@@ -58,13 +58,14 @@ header {
   padding: 10px 0;
 }
 
-nav {
+div[class="nav"] {
+  height: 50px;
+  background-color: #999; /* medium gray */
   display: flex;
-  align-items: center;
-  background-color: #ff80ff;
   padding: 1% 0;
   margin-bottom: 10px;
 }
+
 
 nav ul {
   padding: 0;
@@ -229,3 +230,6 @@ audio {
   flex: 5;
 }
 
+p {
+  font-size: 1.2rem; /* increase paragraph text size only */
+}
