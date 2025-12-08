@@ -6,7 +6,7 @@ Challenge: Accessibility troubleshooting
 -->
 
 <!DOCTYPE html>
-<html>
+<html lan="en">
   <head>
     <meta charset="utf-8">
 
@@ -21,11 +21,11 @@ Challenge: Accessibility troubleshooting
   </head>
 
   <body>
-    <div class="header">
-      <font size="7">Welcome to our wildlife website</font>
-    </div>
+   <header>
+  <h1>Welcome to our wildlife website</h1>
+</header>
 
-    <div class="nav">
+    <nav>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Our team</a></li>
@@ -34,10 +34,11 @@ Challenge: Accessibility troubleshooting
       </ul>
 
       <form class="search">
-        <input type="search" name="q" placeholder="Search query">
-        <input type="submit" value="Go!">
+      <label for="search" class="sr-only">Search the site</label>
+    <input id="search" type="search" name="q" placeholder="Search query">
+    <input type="submit" value="Go!">
       </form>
-    </div>
+    </nav>
 
     <main>
       <article>
