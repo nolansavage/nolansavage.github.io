@@ -1,5 +1,4 @@
-/* || General setup */
-
+/* || General Setup */
 html, body {
   margin: 0;
   padding: 0;
@@ -10,6 +9,12 @@ html {
   background-color: #dde;
 }
 
+body {
+  width: 80%;
+  min-width: 1024px;
+  margin: 0 auto;
+}
+
 .sr-only {
   position: absolute;
   left: -10000px;
@@ -18,96 +23,63 @@ html {
   overflow: hidden;
 }
 
-
-body {
-  width: 80%;
-  min-width: 1024px;
-  margin: 0 auto;
-}
-
-/* || typography */
-
-font[size="7"], font[size="6"], font[size="5"] {
+/* || Typography */
+h1 {
   font-family: 'Sonsie One', cursive;
-  color: #2a2a2a;
-}
-
-p, input, li, table, label {
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: #2a2a2a;
-}
-
-font[size="7"] {
   font-size: 4rem;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 10px black;
 }
 
-h1 {
-font-family: 'Sonsie One',cursive;
-font-size:4rem;
-text-align:center;
-color: white;
-text-shadow: 2px 2px 10px black;
-}
-
 h2 {
   font-family: 'Sonsie One', cursive;
   font-size: 3rem;
   text-align: center;
-  color: #2a2a2a; 
+  color: #2a2a2a;
 }
 
 h3 {
   font-family: 'Sonsie One', cursive;
   font-size: 2.2rem;
-  color: #2a2a2a;
+  margin-top: 2rem;
 }
 
 p, li, table, label {
-font-family: 'Open Sans Condensed', sans-serif;
-color: #2a#2a#2a;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #2a2a2a;
   font-size: 1.6rem;
   line-height: 1.5;
 }
 
-/* || header layout */
-
-div[class="nav"], article, footer, .secondary {
+/* || Header and Navigation */
+header {
   background-color: white;
+  padding: 10px 0;
 }
 
-article, footer, .secondary {
-  padding: 10px 30px;
-}
-
-article {
-  margin-right: 10px;
-}
-
-div[class="nav"] {
-  height: 50px;
-  background-color: ff80ff;
+nav {
   display: flex;
+  align-items: center;
+  background-color: #ff80ff;
   padding: 1% 0;
   margin-bottom: 10px;
 }
 
-div[class="nav"] ul {
+nav ul {
   padding: 0;
   list-style-type: none;
-  flex: 2;
   display: flex;
+  flex: 2;
 }
 
-div[class="nav"] li {
+nav li {
   display: inline;
   text-align: center;
   flex: 1;
 }
 
-div[class="nav"] a {
+nav a {
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
@@ -115,7 +87,7 @@ div[class="nav"] a {
   color: black;
 }
 
-div[class="nav"] .search {
+nav .search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -140,14 +112,14 @@ div[class="nav"] .search {
   color: white;
 }
 
-/* || main layout */
-
+/* || Main Layout */
 main {
   display: flex;
 }
 
 article {
   flex: 5;
+  padding-right: 10px;
 }
 
 .secondary {
@@ -156,21 +128,24 @@ article {
 
 footer {
   margin-top: 10px;
+  text-align: center;
 }
 
-/* Table styling */
-
+/* || Table Styling */
 table {
   width: 100%;
   background-color: #dde;
   border-collapse: collapse;
 }
 
-th, td {
-  padding: 10px;
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-td {
+th, td {
+  padding: 10px;
   text-align: center;
 }
 
@@ -182,8 +157,7 @@ tbody tr:nth-child(odd) {
   background-color: #def;
 }
 
-/* styling content images and audio */
-
+/* || Images and Audio */
 img, audio {
   display: block;
   margin: 0 auto;
@@ -193,8 +167,7 @@ audio {
   width: 500px;
 }
 
-/* Comments styling */
-
+/* || Comments Section */
 .comments {
   background-color: #def;
   padding: 10px;
@@ -202,14 +175,14 @@ audio {
 
 .show-hide {
   cursor: pointer;
-}
-
-.comments font[size="6"] {
-  font-size: 2rem;
-}
-
-.comments font[size="6"]:nth-of-type(2) {
-  margin-bottom: 0;
+  text-align: center;
+  width: 150px;
+  display: inline-block;
+  background: #333;
+  border: 0;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 32px;
 }
 
 .comment-form {
@@ -232,35 +205,19 @@ audio {
   flex: 6;
 }
 
-.show-hide {
-  text-align: center;
-  width: 150px;
-}
-
-.comment-form input, .comment-form label, .show-hide {
-  font-size: 1.6rem;
-  line-height: 32px;
-}
-
-.comment-form input[type="submit"], .show-hide {
+.comment-form input[type="submit"] {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
   background: #333;
   border: 0;
   color: white;
 }
 
-.comment-form input[type="submit"] {
-  width: 30%;
-  display: block;
-  margin: 0 auto;
-}
-
-.comment-container {
-  margin-top: 0;
-}
-
 .comment-container li {
   list-style-type: none;
   display: flex;
+  margin-bottom: 1rem;
 }
 
 .comment-container li p:nth-child(1) {
@@ -271,3 +228,4 @@ audio {
 .comment-container li p:nth-child(2) {
   flex: 5;
 }
+
