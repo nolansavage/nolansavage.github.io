@@ -65,7 +65,9 @@ h3 {
   color: #2a2a2a;
 }
 
-p, li, table {
+p, li, table, label {
+font-family: 'Open Sans Condensed', sans-serif;
+color: #2a#2a#2a;
   font-size: 1.6rem;
   line-height: 1.5;
 }
