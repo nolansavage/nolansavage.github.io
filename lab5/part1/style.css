@@ -10,6 +10,15 @@ html {
   background-color: #dde;
 }
 
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
 body {
   width: 80%;
   min-width: 1024px;
